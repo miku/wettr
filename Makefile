@@ -9,6 +9,7 @@ clean:
 	rm -rf dist/
 	rm -rf wettr.egg-info/
 	rm -rf .ruff_cache/
+	rm -rf .mypy_cache/
 
 .PHONY: lint
 lint:
