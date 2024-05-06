@@ -13,6 +13,7 @@ license = {file = "LICENSE"}
 
 dependencies = [
     "requests>=2.31,<3", # https://packaging.python.org/en/latest/specifications/dependency-specifiers/#dependency-specifiers
+    "xdg-base-dirs>=6,<7",
 ]
 
 authors = [
