@@ -1,7 +1,7 @@
 # pip install build to run the commands
 
 .PHONY: build
-build:
+build: lint fmt
 	python -m build
 
 .PHONY: clean
