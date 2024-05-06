@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+
+name = "wettr"
+requires-python = ">= 3.8"
+version = "0.1.0" # OR: dynamic = ["version"]
+description = "Small weather cli using open meteo API"
+readme = "README.md" # readme = {file = "README.txt", content-type = "text/markdown"}
+license = {file = "LICENSE"}
+
+dependencies = [
+    "requests>=2.31,<3", # https://packaging.python.org/en/latest/specifications/dependency-specifiers/#dependency-specifiers
+]
+
+authors = [
+  {name = "Martin Czygan", email = "martin.czygan@gmail.com"},
+]
+maintainers = [
+  {name = "Martin Czygan", email = "martin.czygan@gmail.com"},
+]
+
+keywords = ["weather", "cli"]
+
+[project.scripts]
+wettr-cli = "wettr:main"
+
+[project.urls]
+Homepage = "https://github.com/miku/wettr"
+Documentation = "https://github.com/miku/wettr"
+Repository = "https://github.com/miku/wettr.git"
+Issues = "https://github.com/miku/wettr/issues"
+# Changelog = "https://github.com/miku/wettr/blob/master/CHANGELOG.md"
