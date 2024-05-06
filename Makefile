@@ -6,10 +6,12 @@ build: lint fmt
 
 .PHONY: clean
 clean:
+	rm -rf build/
 	rm -rf dist/
 	rm -rf wettr.egg-info/
 	rm -rf .ruff_cache/
 	rm -rf .mypy_cache/
+	rm -f wettr.pyz
 
 .PHONY: lint
 lint:
@@ -50,3 +52,6 @@ dev-requirements.txt:
 
 wettr.pyz:
 	shiv -c wettr-cli -o wettr.pyz .
+
+dist/w:
+	pyinstaller --onefile --clean w.py
