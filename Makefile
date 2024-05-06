@@ -25,7 +25,8 @@ fmt:
 
 .PHONY: install-local
 install-local:
-	python -m pip install -e .
+	python -m pip install -e . -e .[dev]
+
 
 .PHONY: test
 test:

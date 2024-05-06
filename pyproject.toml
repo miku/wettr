@@ -40,7 +40,12 @@ Issues = "https://github.com/miku/wettr/issues"
 # [tool.xxx] tables, e.g. [tool.poetry], [tool.poetry....]
 
 [project.optional-dependencies]
-dev = ["pytest"]
+dev = [
+    "mypy",
+    "pyinstaller",
+    "pytest",
+    "shiv",
+]
 
 
 [tool.ruff]
