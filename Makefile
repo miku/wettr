@@ -8,6 +8,7 @@ build: lint fmt
 clean:
 	rm -rf dist/
 	rm -rf wettr.egg-info/
+	rm -rf .ruff_cache/
 
 .PHONY: lint
 lint:
