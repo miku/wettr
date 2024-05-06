@@ -39,6 +39,10 @@ Issues = "https://github.com/miku/wettr/issues"
 # There are many different tools, and they can piggyback on pyproject.toml, via
 # [tool.xxx] tables, e.g. [tool.poetry], [tool.poetry....]
 
+[project.optional-dependencies]
+dev = ["pytest"]
+
+
 [tool.ruff]
 # Exclude a variety of commonly ignored directories.
 exclude = [

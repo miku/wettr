@@ -40,3 +40,10 @@ upload: build
 
 	# to try out, in some other venv:
 	# pip install --no-cache --upgrade --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple wettr
+
+requirements.txt:
+	python -m piptools compile -o requirements.txt pyproject.toml
+
+dev-requirements.txt:
+	python -m piptools compile --extra dev -o dev-requirements.txt pyproject.toml
+
