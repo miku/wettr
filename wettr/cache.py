@@ -9,6 +9,8 @@ from xdg_base_dirs import (
 )
 
 
+
+
 def fetch_openmeteo(lat: float = 51.0504, long: float = 13.7373) -> Dict[str, Any]:
     """
     See examples at: https://open-meteo.com/
@@ -23,6 +25,9 @@ def fetch_openmeteo(lat: float = 51.0504, long: float = 13.7373) -> Dict[str, An
         raise RuntimeError(f"could not fetch open meteo API: {resp.status}")
     return resp.json()
 
+
+def weather_for_city(city: str, max_age_s: int 300) -> Dict[str, Any]:
+    raise NotImplementedError()
 
 def weather_for_dresden(max_age_s: int = 300) -> Dict[str, Any]:
     """
