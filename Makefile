@@ -18,8 +18,8 @@ upload: build
 	# $ cat ~/.pypirc
 	# [testpypi]
 	#   username = __token__
-	#   password = pypi-iuas7duuu1212UUais...
+	#   password = pypi-iuas7duuu1212UUais...
 	twine upload -r testpypi dist/*
 
 	# to try out, in some other venv:
-	# pip install --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple wettr
+	# pip install --no-cache --upgrade --index-url https://test.pypi.org/simple/ --extra-index-url https://pypi.org/simple wettr

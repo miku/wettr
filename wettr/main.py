@@ -3,6 +3,9 @@ from xdg_base_dirs import (
         xdg_cache_home,
 )
 
+from .cache import temperature_for_dresden
+
+
 def main():
-    print("hello, world!")
-    print(f"api responses cached under: {xdg_cache_home()}")
+    temp = temperature_for_dresden()
+    print(f"Dresden, {temp}")
