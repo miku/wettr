@@ -1,16 +1,18 @@
+import json
+import os
+import time
+from typing import Any, Dict
+
+import requests
 from xdg_base_dirs import (
     xdg_cache_home,
 )
-import os
-import requests
-import json
-import time
-from typing import Dict, Any
-
-# curl "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
 
 
 def fetch_openmeteo(lat: float = 51.0504, long: float = 13.7373) -> Dict[str, Any]:
+    """
+    See examples at: https://open-meteo.com/
+    """
     params = {
         "latitude": lat,
         "longitude": long,

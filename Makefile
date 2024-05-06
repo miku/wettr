@@ -22,6 +22,10 @@ fmt:
 install-local:
 	python -m pip install -e .
 
+.PHONY: test
+test:
+	pytest
+
 .PHONY: mypy
 mypy:
 	mypy wettr
