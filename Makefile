@@ -53,5 +53,7 @@ dev-requirements.txt:
 wettr.pyz:
 	shiv -c wettr-cli -o wettr.pyz .
 
-dist/w:
+.PHONY: exe
+exe:
 	pyinstaller --onefile --clean w.py
+
