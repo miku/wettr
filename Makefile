@@ -22,6 +22,10 @@ fmt:
 install-local:
 	python -m pip install -e .
 
+.PHONY: mypy
+mypy:
+	mypy wettr
+
 .PHONY: upload
 upload: build
 	# $ cat ~/.pypirc

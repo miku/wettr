@@ -117,3 +117,13 @@ docstring-code-format = false
 # This only has an effect when the `docstring-code-format` setting is
 # enabled.
 docstring-code-line-length = "dynamic"
+
+[tool.mypy]
+python_version = "3.10"
+# ignore_missing_imports = true # does not work globally (yet)
+
+[[tool.mypy.overrides]]
+module = [
+    "requests",
+]
+ignore_missing_imports = true
