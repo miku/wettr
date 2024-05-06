@@ -5,11 +5,12 @@ import os
 import requests
 import json
 import time
+from typing import Dict, Any
 
 # curl "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
 
 
-def fetch_openmeteo(lat=51.0504, long=13.7373):
+def fetch_openmeteo(lat: float = 51.0504, long: float = 13.7373) -> Dict[str, Any]:
     params = {
         "latitude": lat,
         "longitude": long,
@@ -21,7 +22,7 @@ def fetch_openmeteo(lat=51.0504, long=13.7373):
     return resp.json()
 
 
-def weather_for_dresden(max_age_s=300):
+def weather_for_dresden(max_age_s: int = 300) -> Dict[str, Any]:
     """
     Returns a recent weather report in JSON from open meteo API.
     """
@@ -37,6 +38,6 @@ def weather_for_dresden(max_age_s=300):
         return json.load(f)
 
 
-def temperature_for_dresden(max_age_s=300):
+def temperature_for_dresden(max_age_s: int = 300) -> float:
     weather_resp = weather_for_dresden(max_age_s)
     return weather_resp["current"]["temperature_2m"]
