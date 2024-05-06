@@ -25,7 +25,7 @@ maintainers = [
 keywords = ["weather", "cli"]
 
 [project.scripts]
-wettr-cli = "wettr:main"
+wettr-cli = "wettr:main.main"
 
 [project.urls]
 Homepage = "https://github.com/miku/wettr"
@@ -33,3 +33,7 @@ Documentation = "https://github.com/miku/wettr"
 Repository = "https://github.com/miku/wettr.git"
 Issues = "https://github.com/miku/wettr/issues"
 # Changelog = "https://github.com/miku/wettr/blob/master/CHANGELOG.md"
+
+
+# There are many different tools, and they can piggyback on pyproject.toml, via
+# [tool.xxx] tables, e.g. [tool.poetry], [tool.poetry....]
