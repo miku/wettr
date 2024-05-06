@@ -1,0 +1,2 @@
+# wettr
+Wetter CLI
