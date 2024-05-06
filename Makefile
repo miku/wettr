@@ -48,3 +48,5 @@ requirements.txt:
 dev-requirements.txt:
 	python -m piptools compile --extra dev -o dev-requirements.txt pyproject.toml
 
+wettr.pyz:
+	shiv -c wettr-cli -o wettr.pyz .
