@@ -9,6 +9,14 @@ clean:
 	rm -rf dist/
 	rm -rf wettr.egg-info/
 
+.PHONY: lint
+lint:
+	ruff check --fix
+
+.PHONY: fmt
+fmt:
+	ruff format
+
 .PHONY: install-local
 install-local:
 	python -m pip install -e .

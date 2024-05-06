@@ -1,5 +1,5 @@
 from xdg_base_dirs import (
-        xdg_cache_home,
+    xdg_cache_home,
 )
 import os
 import requests
@@ -8,6 +8,7 @@ import time
 
 
 # curl "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current=temperature_2m,wind_speed_10m&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m"
+
 
 def fetch_openmeteo(lat=51.0504, long=13.7373):
     params = {
@@ -20,13 +21,17 @@ def fetch_openmeteo(lat=51.0504, long=13.7373):
         raise RuntimeError(f"could not fetch open meteo API: {resp.status}")
     return resp.json()
 
+
 def weather_for_dresden(max_age_s=300):
     """
     Returns a recent weather report in JSON from open meteo API.
     """
     cachefile = os.path.join(xdg_cache_home(), "wettr", "dresden.json")
     os.makedirs(os.path.dirname(cachefile), exist_ok=True)
-    if not os.path.exists(cachefile) or (time.time() - os.path.getmtime(cachefile)) > max_age_s:
+    if (
+        not os.path.exists(cachefile)
+        or (time.time() - os.path.getmtime(cachefile)) > max_age_s
+    ):
         with open(cachefile, "w") as f:
             json.dump(fetch_openmeteo(), f)
     with open(cachefile) as f:
