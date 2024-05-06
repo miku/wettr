@@ -12,6 +12,7 @@ clean:
 	rm -rf .ruff_cache/
 	rm -rf .mypy_cache/
 	rm -f wettr.pyz
+	rm -f w.spec
 
 .PHONY: lint
 lint:
