@@ -47,6 +47,13 @@ To build the source and wheel, we can run:
 $ make
 ```
 
+There build artifact shoud appear in the `dist` directory:
+
+```
+
+```
+
+
 As of 05/2024, pyproject does not have a fixed way to specify development
 dependencies - as [per this thread](https://discuss.python.org/t/development-dependencies-in-pyproject-toml/26149).
 
