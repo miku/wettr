@@ -12,7 +12,7 @@ clean:
 	rm -rf .ruff_cache/
 	rm -rf .mypy_cache/
 	rm -rf .pytest_cache/
-	rm -rf wettr/.pytest_cache/
+	rm -rf wettr/__pycache__/
 	rm -f wettr.pyz
 	rm -f w.spec
 
