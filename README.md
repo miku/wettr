@@ -61,7 +61,9 @@ dev = [
     "mypy",
     "pyinstaller",
     "pytest",
+    "ruff",
     "shiv",
+    "uv",
 ]
 ```
 

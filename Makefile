@@ -1,4 +1,15 @@
-# pip install build to run the commands
+# Makefile for example Python project, based on the newer pyproject standard
+# (PEP518, PEP621, ...)
+#
+# Create a virtualenv first:
+#
+# $ python -m venv .venv && source .venv/bin/activate
+#
+# Install "build" package, https://build.pypa.io/en/stable/, which is a
+# minimalist packaging frontend.
+#
+# $ python -m pip install build
+#
 
 .PHONY: build
 build: lint fmt
@@ -24,9 +35,9 @@ lint:
 fmt:
 	ruff format
 
-.PHONY: install-local
-install-local:
-	uv pip install -e . -e .[dev]
+.PHONY: install
+install:
+	uv pip install --editable . --editable .[dev]
 
 
 .PHONY: test
