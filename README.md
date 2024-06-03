@@ -2,7 +2,8 @@
 
 A weather CLI using [Open Meteo API](https://open-meteo.com/), an example
 project using
-[pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#writing-pyproject-toml).
+[pyproject.toml](https://packaging.python.org/en/latest/guides/writing-pyproject-toml/#writing-pyproject-toml)
+and [uv](https://astral.sh/blog/uv).
 
 ```
 $ git clone https://github.com/miku/wettr.git
